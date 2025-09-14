@@ -12,3 +12,15 @@ One‑liner: Upload, browse, save, and discuss recipes with role‑based access 
 
 2) Rationale for Selection
 
+a) Fit to Required Criteria
+
+Web-based platform: HTML/CSS frontend + Python with Flask & SQLite backend.
+Distinct user roles: User (create/browse/save/rate/comment), Admin (moderate content, manage tags, handle reports, feature recipes, ban users).
+Hosting: Self-host
+Dynamic pages: User profiles, recipe detail pages, feeds (home, trending, following), search results, collections, admin dashboard.
+Feasible in ~8 weeks with 3 devs: Incremental sprints, & 1 catchup sprint.
+b) Business Needs — Why This Matters
+
+Pain points: Recipe discovery is noisy; saving and re‑finding recipes across sources is clunky; dietary preferences/allergies often poorly filtered; creators struggle to build audience without heavy social platforms.
+Value proposition: A focused, fast recipe hub with granular filters (time, difficulty, ingredients on‑hand), trusted ratings, and chef/creator profiles. For creators, lightweight portfolio pages and analytics. For users, collections and smart shopping lists.
+Monetization paths (future): Featured creators, affiliate links to ingredients/tools, premium collections, ad‑light model, or white‑label recipe hubs for food bloggers.
