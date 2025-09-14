@@ -1,0 +1,14 @@
+P1 – L04_SegFaults
+
+Aakash Singh, Estella Arnott, Samira Almuallim
+
+Recipe Sharing Platform
+
+1) Selected Project
+
+Title: Wooden Spoon — A modern, web‑based recipe sharing platform
+
+One‑liner: Upload, browse, save, and discuss recipes with role‑based access (User, Admin), dynamic content, and a clean, desktop‑first UX.
+
+2) Rationale for Selection
+
