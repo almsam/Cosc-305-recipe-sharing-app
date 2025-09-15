@@ -24,3 +24,17 @@ b) Business Needs — Why This Matters
 Pain points: Recipe discovery is noisy; saving and re‑finding recipes across sources is clunky; dietary preferences/allergies often poorly filtered; creators struggle to build audience without heavy social platforms.
 Value proposition: A focused, fast recipe hub with granular filters (time, difficulty, ingredients on‑hand), trusted ratings, and chef/creator profiles. For creators, lightweight portfolio pages and analytics. For users, collections and smart shopping lists.
 Monetization paths (future): Featured creators, affiliate links to ingredients/tools, premium collections, ad‑light model, or white‑label recipe hubs for food bloggers.
+
+c) Stakeholders
+
+End users/home cooks (primary)
+Recipe creators/food bloggers (content supply)
+Admins/moderators (quality & safety)
+Teaching staff/TAs (project oversight)
+d) Vision (What the Project Provides)
+
+Wooden Spoon becomes the go‑to place to quickly find cookable recipes that match pantry items and dietary needs, while giving creators a tidy showcase. In MVP, users can post recipes with steps and photos, search and filter by tags/ingredients, save to collections, and leave ratings/comments. Admins ensure quality via moderation tools and reporting.
+
+We believe this project is aligned with the course constraints, offers meaningful learning, and will make a strong portfolio piece.
+
+AI was used in the creation of this document.
