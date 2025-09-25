@@ -76,3 +76,27 @@ Admins/Moderators: Ensure quality and trust via moderation.
 Project Team Members: Development and delivery of MVP.
 
 Teaching Staff/TAs: Oversight, feedback, and assessment.
+
+
+
+### 7, Project Milestones
+
+ - Week 1–2: Requirements gathering, design mockups, database schema
+ - Week 3–4: Backend setup (Flask n SQLite), user authentication
+ - Week 5–6: Core features: recipe upload, browse/search, collections
+ - Week 7: Admin tools, bug fixes, system testing
+ - Week 8: Final polish, documentation, deployment, and demo
+
+
+
+### 8, Big Deliverables/Milestones:
+
+Design documentation and mockups
+
+Flask + SQLite backend with authentication and data storage.
+
+Web frontend with recipe upload and search features.
+
+Admin dashboard with moderation tools.
+
+Final report, demo, and project handoff.
