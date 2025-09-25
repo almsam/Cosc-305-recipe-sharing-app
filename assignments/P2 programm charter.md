@@ -122,4 +122,14 @@ AI tools may be used to assist development (coding, summarization) - but only wi
 
  - MVP must be live by December 5, 2025 for sign-off.
 
+### 11, Charter Acceptance
 
+By approving this charter, stakeholders acknowledge alignment on scope, purpose, and objectives:
+
+**Signed:**
+
+Aakash Singh:
+
+Estella Arnott:
+
+Samira Almuallim:
