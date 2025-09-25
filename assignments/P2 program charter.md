@@ -130,6 +130,6 @@ By approving this charter, stakeholders acknowledge alignment on scope, purpose,
 
 Aakash Singh:
 
-Estella Arnott:
+Estella Arnott: Estella
 
 Samira Almuallim: *_Sami*
