@@ -100,3 +100,26 @@ Web frontend with recipe upload and search features.
 Admin dashboard with moderation tools.
 
 Final report, demo, and project handoff.
+
+
+
+
+### 9, Assumptions
+
+Team members will contribute 5 hours per week outside of lab.
+Hosting will be done via self-host or free service (e.g., Heroku, Render)
+Initial user base will be small (team, TAs, limited testers)
+AI tools may be used to assist development (coding, summarization) - but only with attribution
+
+
+### 10, Constraints
+
+ - 8-week timeline with limited resources.
+
+ - Team of 3 developers with varying experience levels.
+
+ - Limited budget for hosting and optional AI integration.
+
+ - MVP must be live by December 5, 2025 for sign-off.
+
+
