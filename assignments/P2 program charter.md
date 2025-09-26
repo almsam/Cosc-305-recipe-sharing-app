@@ -128,7 +128,7 @@ By approving this charter, stakeholders acknowledge alignment on scope, purpose,
 
 **Signed:**
 
-Aakash Singh:
+Aakash Singh: Aakash
 
 Estella Arnott: Estella
 
