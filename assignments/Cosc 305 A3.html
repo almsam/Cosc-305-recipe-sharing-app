@@ -1,0 +1,657 @@
+<!DOCTYPE html><html><head>
+      <title>Cosc 305 A3</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\samia\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="cosc-305-assignment-3">Cosc 305 Assignment 3: </h1>
+<h3 id="samira-almuallim-62197256-2025-wt1">Samira Almuallim, 62197256, 2025 WT1 </h3>
+<hr>
+<h1 id="q1">Q1: </h1>
+<h3 id="1-a">1. A: </h3>
+<p>All paths:<br>
+ABCF, 2+4+3+3=12 days<br>
+ADF, 2+7+3=12 days<br>
+AEF, 2+8+3=13 days</p>
+<p>AEF is the critical paths</p>
+<h3 id="1-b--c">1. B &amp; C: </h3>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Task precedence</th>
+<th>Length (days)</th>
+<th>ES</th>
+<th>EF</th>
+<th>LS</th>
+<th>LF</th>
+<th>Slack (LS−ES)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>_ (start)</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>B</td>
+<td>A - B</td>
+<td>4</td>
+<td>2</td>
+<td>6</td>
+<td>3</td>
+<td>7</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C</td>
+<td>B - C</td>
+<td>3</td>
+<td>6</td>
+<td>9</td>
+<td>7</td>
+<td>10</td>
+<td>1</td>
+</tr>
+<tr>
+<td>D</td>
+<td>A - D</td>
+<td>7</td>
+<td>2</td>
+<td>9</td>
+<td>3</td>
+<td>10</td>
+<td>1</td>
+</tr>
+<tr>
+<td>E</td>
+<td>A - E</td>
+<td>8</td>
+<td>2</td>
+<td>10</td>
+<td>2</td>
+<td>10</td>
+<td>0</td>
+</tr>
+<tr>
+<td>F</td>
+<td>C, D, E - F</td>
+<td>3</td>
+<td>10</td>
+<td>13</td>
+<td>10</td>
+<td>13</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Total Slack = LS − ES = LF − EF</p>
+<p>SA =  0-0  = 0<br>
+SB =  3-2  = 1<br>
+SC =  7-6  = 1<br>
+SD =  3-2  = 1<br>
+SE =  2-2  = 0<br>
+SF = 10-10 = 0</p>
+<h3 id="1-d">1. D: </h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>Team member</th>
+<th>Day of the week</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>M</th>
+<th>T</th>
+<th>W</th>
+<th>Th</th>
+<th>F</th>
+<th>Sa</th>
+<th>S</th>
+<th>M</th>
+<th>T</th>
+<th>W</th>
+<th>Th</th>
+<th>F</th>
+<th>Sa</th>
+<th>S</th>
+<th>M</th>
+<th>T</th>
+<th>W</th>
+<th>Th</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>Jill</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>Tom</td>
+<td></td>
+<td></td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>__</td>
+<td>_</td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Jill</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>Sam</td>
+<td></td>
+<td></td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>__</td>
+<td>_</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>Susan</td>
+<td></td>
+<td></td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>__</td>
+<td>_</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>F</strong></td>
+<td>Ken</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-e">1. E: </h3>
+<p>No - since Tom doesn't start until Jill went on break, &amp; Jill didn't resume until tom finished. In addition, kens work could also be picked up by susan or sam as no overlap exists</p>
+<p>So Jill, Tom, &amp; Ken's work can all be mixed into 1 persons workload -- thus only 3 of the 6 are needed</p>
+<h3 id="1-f">1. F: </h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>Team member</th>
+<th>Day of the week</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>M</th>
+<th>T</th>
+<th>W</th>
+<th>Th</th>
+<th>F</th>
+<th>Sa</th>
+<th>S</th>
+<th>M</th>
+<th>T</th>
+<th>W</th>
+<th>Th</th>
+<th>F</th>
+<th>Sa</th>
+<th>S</th>
+<th>M</th>
+<th>T</th>
+<th>W</th>
+<th>Th</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ABCF</strong></td>
+<td>Tom</td>
+<td>A</td>
+<td>A</td>
+<td>B</td>
+<td>B</td>
+<td>B</td>
+<td>__</td>
+<td>_</td>
+<td>B</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>Sam</td>
+<td></td>
+<td></td>
+<td>D</td>
+<td>D</td>
+<td>D</td>
+<td>__</td>
+<td>_</td>
+<td>D</td>
+<td>D</td>
+<td>D</td>
+<td>D</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>Susan</td>
+<td></td>
+<td></td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>__</td>
+<td>_</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>__</td>
+<td>_</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>I would merge Jill &amp; Tom's work, as well as giving Ken's work to Susan</p>
+<h3 id="1-g">1. G: </h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>Team member</th>
+<th>Day of the week</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>M</th>
+<th>T</th>
+<th>W</th>
+<th>Th</th>
+<th>F</th>
+<th>Sa</th>
+<th>S</th>
+<th>M</th>
+<th>T</th>
+<th>W</th>
+<th>Th</th>
+<th>F</th>
+<th>Sa</th>
+<th>S</th>
+<th>M</th>
+<th>T</th>
+<th>W</th>
+<th>Th</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ABCF</strong></td>
+<td>Tom</td>
+<td>A</td>
+<td>A</td>
+<td>B</td>
+<td>B</td>
+<td>B</td>
+<td>__</td>
+<td>_</td>
+<td>B</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>Sam</td>
+<td></td>
+<td></td>
+<td>D</td>
+<td>D</td>
+<td>D</td>
+<td>__</td>
+<td>_</td>
+<td>D</td>
+<td>D</td>
+<td>D</td>
+<td>D</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>Susan</td>
+<td></td>
+<td></td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>__</td>
+<td>_</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>__</td>
+<td>_</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Because of my specific solution to F, it would look the same as Tom can single handedly clear both Their &amp; Jill's work</p>
+<h3 id="1-h">1. H: </h3>
+<p>The critical pth is AEF at 13 days, so the only tasks that could reduce the length of the project are A, E, or F</p>
+<p>thus the candidates are: A for 1000<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo separator="true">,</mo><mi>E</mi><mi>f</mi><mi>o</mi><mi>r</mi><mn>1200</mn></mrow><annotation encoding="application/x-tex">, E for 1200</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal" style="margin-right:0.02778em;">or</span><span class="mord">1200</span></span></span></span>, or F for 1800$</p>
+<p>Therefore: I choose task A, as it will reduce the schedule by a day (unlike B C or D) &amp; costs less then E or F for the same 1 day benefit</p>
+<hr>
+<h1 id="q2">Q2: </h1>
+<h3 id="2-a">2. A: </h3>
+<p>pert formula: t_e = (t_o+4t_m+t_p)/6</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>expected time:</th>
+<th>variance:</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>(t_e=(t_o+4t_m+t_p)/6)</th>
+<th>(\sigma<sup>2=((t_p-t_o)/6)</sup>2)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>(1 + 4·2 + 3)/6 =<strong>2</strong></td>
+<td>((3−1)/6)^2 =<strong>0.111111</strong></td>
+</tr>
+<tr>
+<td>B</td>
+<td>(2 + 4·4 + 6)/6 =<strong>4</strong></td>
+<td>((6−2)/6)^2 =<strong>0.444444</strong></td>
+</tr>
+<tr>
+<td>C</td>
+<td>(1 + 4·3 + 5)/6 =<strong>3</strong></td>
+<td>((5−1)/6)^2 =<strong>0.444444</strong></td>
+</tr>
+<tr>
+<td>D</td>
+<td>(6 + 4·7 +14)/6 =<strong>8</strong></td>
+<td>((14−6)/6)^2 =<strong>1.777778</strong></td>
+</tr>
+<tr>
+<td>E</td>
+<td>(5 + 4·8 +11)/6 =<strong>8</strong></td>
+<td>((11−5)/6)^2 =<strong>1.000000</strong></td>
+</tr>
+<tr>
+<td>F</td>
+<td>(1 + 4·3 + 8)/6 =<strong>3.5</strong></td>
+<td>((8−1)/6)^2 =<strong>1.361111</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Expected duration, variance, &amp; SD:</p>
+<p>ABCF - 2+4+3+3.5 = 12.5 days<br>
+var - 0.111111 + 0.444444 + 0.444444 + 1.361111 = 1.803<br>
+sd = sqrt(var) = 1.537<br>
+ADF  - 2+8+3.5 = 13.5 days<br>
+var - 0.111111 + 1.777778 + 1.361111 = 3.250000<br>
+sd = sqrt(var) = 1.803<br>
+AEF  - 2+8+3.5 = 13.5 days<br>
+var - 0.111111 + 1.000000 + 1.361111 = 2.472222<br>
+sd = sqrt(var) = 1.572</p>
+<h3 id="2-b">2. B: </h3>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>optimistic scenario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ABCF</td>
+<td>A(1) + B(2) + C(1) + F(1) =<strong>5</strong> days</td>
+</tr>
+<tr>
+<td>ADF</td>
+<td>A(1) + D(6) + F(1) =<strong>8</strong> days</td>
+</tr>
+<tr>
+<td>AEF</td>
+<td>A(1) + E(5) + F(1) =<strong>7</strong> days</td>
+</tr>
+</tbody>
+</table>
+<p>optimistic total time = max([5, 8, 7]) = 8 days</p>
+<p>SD = SD(ADF) = 1.8 days   //see 2A</p>
+<h3 id="2-c">2. C: </h3>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>pessimistic scenario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ABCF</td>
+<td>A(3) + B(6) + C(5) + F(8) =<strong>22</strong> days</td>
+</tr>
+<tr>
+<td>ADF</td>
+<td>A(3) + D(14) + F(8) =<strong>25</strong> days</td>
+</tr>
+<tr>
+<td>AEF</td>
+<td>A(3) + E(11) + F(8) =<strong>22</strong> days</td>
+</tr>
+</tbody>
+</table>
+<p>pessimistic total time = max([22, 25, 22]) = 25 days</p>
+<p>SD = SD(ADF) = 4 days  //see 2A</p>
+<h3 id="2-d">2. D: </h3>
+<p>I. Probability to complete the project in 18 days</p>
+<p>Z-score: Z = X-u / sd = 18-13.67 / 1.8 = 4.33 / 1.8 ~= 2.41</p>
+<p>Z 2.41 - 99.2% chance of completing the project in under 18 days</p>
+<p>II. Probability to complete the project in 12 days</p>
+<p>Z-score: Z = X-u / sd = 12-13.67 / 1.8 = 1.67 / 1.8 ~= 0.93</p>
+<p>Z 0.93 - 17.62% chance of completing the project in under 12 days</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
