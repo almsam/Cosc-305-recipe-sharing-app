@@ -1,0 +1,36 @@
+# Cosc 305 Recipe app - L04-SegFaults
+
+### Members
+
+Samira Almuallim
+Aakash Singh
+Estella Arnott
+
+### Project Overview & Obective
+
+The Wooden Spoon project is a web app designed to simplify the process of uploading,
+finding, & sharing recipes. Many existing recipe sites are cluttered with ads, have poor
+filtering tools, and overall make browsing diPicult. Wooden Spoon offers a focused,
+dynamic platform with simple roles & clean design.
+Project Purpose (Objectives)
+
+### Project Scope
+
+Build a user-friendly recipe sharing app with upload, view, save, and interaction features.
+Provide role-based access (User, Admin) to maintain platform safety and quality.
+Integrate modern UX features such as filtering by ingredients, time, and diPiculty.
+Deliver a functional MVP within the term, aligned with project requirements and deadlines.
+
+### Tech Stack Summary
+
+- Frontend: HTML, CSS, JavaScript (dynamic pages for recipes, profiles, etc.)
+- Backend: Flask (Python), SQLite database
+- Auth: Role-based access (User/Admin)
+- Hosting: Heroku or Render (free/self-hosted)
+- Optional: AI/LLM for recipe recommendations and summarization
+
+### Gantt chart
+
+[Click here](https://app.smartsheet.com/sheets/2C3x5GcQHm6mwGgfX3wcQMh38xpwjc426XJ29Gx1) for the native format
+
+![image](https://github.ubc.ca/samialmu/L04-SegFaults/assets/4469/b4a715ce-292a-4d09-bec0-db84ce22f242)
