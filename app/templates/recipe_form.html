@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}{{ 'Edit' if mode=='edit' else 'New' }} Recipe — Wooden Spoon{% endblock %}
+{% block content %}
+<h2>{{ 'Edit' if mode=='edit' else 'Create' }} Recipe</h2>
+<form id="recipe-form" method="POST"
+      action="{{ url_for('recipe_edit', recipe_id=recipe.id) if mode=='edit' else url_for('recipe_new') }}">
+  <label>Title<input name="title" value="{{ recipe.title if recipe else '' }}"></label>
+  <label>Summary<textarea name="summary">{{ recipe.summary if recipe else '' }}</textarea></label>
+  <label>Ingredients<textarea name="ingredients" placeholder="One per line"></textarea></label>
+  <label>Steps<textarea name="steps" placeholder="One per line"></textarea></label>
+  <button type="submit">Save</button>
+</form>
+{% endblock %}
