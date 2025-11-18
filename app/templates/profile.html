@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Profile — Wooden Spoon{% endblock %}
+{% block content %}
+  <h2>Profile: {{ user.username }}</h2>
+  <img src="{{ user.avatar }}" alt="avatar" class="avatar">
+  <p>Bio: <em>{{ user.bio }}</em></p>
+
+  <a href="/profile/{{ user.username }}/edit">Edit Profile</a>
+
+  <h3>Saved Recipes</h3>
+  <div class="card-grid" id="saved-recipes">
+    {% for r in user.saved %}
+      <article class="card">
+        <img src="/static/images/placeholder.png" alt="">
+        <h3><a href="/recipe/{{ r.id }}">{{ r.title }}</a></h3>
+        <p>{{ r.summary }}</p>
+      </article>
+    {% endfor %}
+  </div>
+{% endblock %}
