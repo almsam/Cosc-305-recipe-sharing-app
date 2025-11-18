@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Edit Profile — Wooden Spoon{% endblock %}
+{% block content %}
+  <h2>Edit Profile: {{ user.username }}</h2>
+  <form method="POST">
+    <label>Bio:</label><br>
+    <textarea name="bio" rows="3">{{ user.bio }}</textarea><br>
+    <button type="submit">Save Changes</button>
+  </form>
+  <p><a href="/profile/{{ user.username }}">Cancel</a></p>
+{% endblock %}
