@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Home — Wooden Spoon{% endblock %}
+{% block content %}
+  <h2>Featured Recipes</h2>
+  <div id="featured-list" class="card-grid"></div>
+
+  <h2>Latest</h2>
+  <div id="latest-list" class="card-grid"></div>
+
+  <script>
+    // fetch sample recipes from /api/recipes and render simple cards
+    (async function(){
+      try{
+        const res = await fetch('/api/recipes');
+        const items = await res.json();
+        const container = document.getElementById('latest-list');
+        container.innerHTML = items.map(i => `
+          <article class="card">
+            <img src="/static/images/placeholder.png" alt="">
+            <h3><a href="/recipe/${i.id}">${i.title}</a></h3>
+            <p>${i.summary}</p>
+          </article>
+        `).join('');
+      }catch(e){console.error(e)}
+    })();
+  </script>
+{% endblock %}
