@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}All Recipes — Wooden Spoon{% endblock %}
+{% block content %}
+  <h2>All Recipes</h2>
+  <a class="button" href="/recipes/new">+ New Recipe</a>
+  <div id="recipes-list" class="card-grid"></div>
+  <script>
+    (async function(){
+      const res = await fetch('/api/recipes');
+      const items = await res.json();
+      document.getElementById('recipes-list').innerHTML = items.map(i=>`
+        <article class="card">
+          <img src="/static/images/placeholder.png" alt="">
+          <h3><a href="/recipe/${i.id}">${i.title}</a></h3>
+          <p>${i.summary}</p>
+        </article>
+      `).join('');
+    })();
+  </script>
+{% endblock %}
