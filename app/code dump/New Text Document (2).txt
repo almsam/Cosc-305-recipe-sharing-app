@@ -1,0 +1,252 @@
+# Flask Recipe App Frontend — Starter Files
+
+## Folder Structure
+
+```
+project_root/
+├── app.py
+├── templates/
+│   ├── base.html
+│   ├── index.html
+│   ├── login.html
+│   ├── register.html
+│   ├── about.html
+│   ├── favourites.html
+│   ├── search_results.html
+│   └── category.html
+└── static/
+    ├── css/
+    │   └── style.css
+    └── js/
+        └── main.js
+```
+
+---
+
+## app.py (Flask routes)
+
+```python
+from flask import Flask, render_template, jsonify
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/register')
+def register():
+    return render_template('register.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/favourites')
+def favourites():
+    return render_template('favourites.html')
+
+@app.route('/search')
+def search_results():
+    return render_template('search_results.html')
+
+@app.route('/category/<string:category_name>')
+def category(category_name):
+    return render_template('category.html', category=category_name)
+
+@app.route('/api/recipes')
+def api_recipes():
+    return jsonify([{"name": "Pasta"}, {"name": "Salad"}])
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+---
+
+## base.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title if title else 'Recipe App' }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>🍲 Recipe App</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/search">Search</a>
+            <a href="/favourites">Favourites</a>
+            <a href="/about">About</a>
+            <a href="/login">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+```
+
+---
+
+## login.html
+
+```html
+{% extends 'base.html' %}
+{% block content %}
+<h2>Login</h2>
+<form method="POST" action="/login">
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br>
+
+    <label>Password:</label><br>
+    <input type="password" name="password" required><br>
+
+    <button type="submit">Login</button>
+</form>
+<p>Don't have an account? <a href="/register">Register here</a>.</p>
+{% endblock %}
+```
+
+---
+
+## register.html
+
+```html
+{% extends 'base.html' %}
+{% block content %}
+<h2>Register</h2>
+<form method="POST" action="/register">
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br>
+
+    <label>Password:</label><br>
+    <input type="password" name="password" required><br>
+
+    <button type="submit">Register</button>
+</form>
+{% endblock %}
+```
+
+---
+
+## about.html
+
+```html
+{% extends 'base.html' %}
+{% block content %}
+<h2>About</h2>
+<p>Welcome to the Recipe App! Discover new dishes, save your favourites, and share your own recipes.</p>
+{% endblock %}
+```
+
+---
+
+## favourites.html
+
+```html
+{% extends 'base.html' %}
+{% block content %}
+<h2>Favourites</h2>
+<p>Your saved recipes will appear here.</p>
+<ul id="favourites-list"></ul>
+{% endblock %}
+```
+
+---
+
+## search_results.html
+
+```html
+{% extends 'base.html' %}
+{% block content %}
+<h2>Search Results</h2>
+<input type="text" id="search-bar" placeholder="Search recipes...">
+<button id="search-btn">Search</button>
+<ul id="results-list"></ul>
+{% endblock %}
+```
+
+---
+
+## category.html
+
+```html
+{% extends 'base.html' %}
+{% block content %}
+<h2>Category: {{ category }}</h2>
+<p>Recipes for {{ category }} category will appear here.</p>
+<ul id="category-list"></ul>
+{% endblock %}
+```
+
+---
+
+## style.css
+
+```css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fdfdfd;
+}
+
+header {
+    background: #f85f57;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+```
+
+---
+
+## main.js
+
+```javascript
+document.addEventListener('DOMContentLoaded', () => {
+    const searchBtn = document.getElementById('search-btn');
+    const searchBar = document.getElementById('search-bar');
+    const resultsList = document.getElementById('results-list');
+
+    if (searchBtn) {
+        searchBtn.addEventListener('click', async () => {
+            const response = await fetch('/api/recipes');
+            const recipes = await response.json();
+            resultsList.innerHTML = '';
+            recipes.forEach(r => {
+                const li = document.createElement('li');
+                li.textContent = r.name;
+                resultsList.appendChild(li);
+            });
+        });
+    }
+});
+```
