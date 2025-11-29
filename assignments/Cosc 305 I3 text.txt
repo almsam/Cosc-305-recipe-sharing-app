@@ -1,0 +1,17 @@
+1. Table, board, timeline, grid, gantt, card, & calender
+
+Table for data processing,
+Board would be good for finding whats ahead & behind progress
+Timeline is useful for communicating with non technical folks
+Grid (like table) is also good for data processing,
+Gantt gives the pros of grid with the waterfall vizualization
+Card is usefull at figuring out each team memers whereabouts
+Calendar is great for handing off to HR or payroll
+
+2. Project settings -> working days -> edit -> non-working days
+then enter the stat holiday dates
+
+3. National Day for Truth & Reconciliation - September 30
+Thanksgiving - October 13, & Remembrance Day - November 11
+
+As well as: reading week - November 10-14
