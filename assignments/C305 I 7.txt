@@ -1,0 +1,15 @@
+1. Progress:
+
+We have a version of the app that can run inside flask, UI is being worked on & is nearing completion, next steps include integrating the back end estella created & using that to optimize everything
+
+2. Risks:
+
+The only risk I see is a mistake during this phase compromising deployment later on
+
+3. Discussion items:
+
+Are we expected to use images? How does code review work?
+
+4. Suggested Gantt change:
+
+We will likely need a bit less time to deploy & a bit more to test - but not a significant change considering reading weej
