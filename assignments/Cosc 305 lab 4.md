@@ -1,3 +1,7 @@
+# Cosc 305 Assignment 3:
+
+### Samira Almuallim, 62197256, 2025 WT1
+
 ## Q1:
 
 ### Given table (interpreted)
