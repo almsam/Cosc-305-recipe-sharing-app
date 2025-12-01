@@ -119,7 +119,7 @@ Total project cost = normal cost + crash increments = $10,950 + $3,650 = **$14,6
 **Cost Variance (CV)** = EV − AC = $25,000 − $29,500 = **−$4,500** - negative CV means **over budget** to date
 
 **Cost Performance Index (CPI)** = EV / AC = 25,000 / 29,500 = **0.8475** (~= **0.85**)
-CPI < 1 ⇒ you are getting $0.85 value for every $1 spent - **cost efficiency is poor**
+CPI < 1 => you are getting $0.85 value for every $1 spent - **cost efficiency is poor**
 
 **Interpretation:** the phase is currently **over budget** by $4,500 and performing at ~85% cost efficiency - spending must go down!
 
@@ -130,7 +130,7 @@ CPI < 1 ⇒ you are getting $0.85 value for every $1 spent - **cost efficiency i
 **Schedule Variance (SV)** = EV − PV = $25,000 − $28,000 = **−$3,000** - negative SV means **behind schedule** (in value terms)
 
 **Schedule Performance Index (SPI)** = EV / PV = 25,000 / 28,000 = **0.8929** (~= **0.89**)
-SPI < 1 ==> about **89%** of planned work value has been earned → **behind schedule**
+SPI < 1 ==> about **89%** of planned work value has been earned -> **behind schedule**
 
 **Interpretation:** the phase is **behind schedule** (shortfall $3,000 in earned value)
 
