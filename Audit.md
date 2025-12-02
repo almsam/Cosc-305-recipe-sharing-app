@@ -88,3 +88,14 @@ The team adapted extremely well overall to stakeholder needs, especially with th
 ---
 
 ## D. Suggestions & Recommendations
+
+1. **Stabilize the timeline earlier**
+   Reduce mid-milestone deliverable movement by re thinking your 'backend first' sequence
+2. **Expand quality metrics**
+   Implement missing testing and data-quality metrics earlier in the milestone - room for improvement in quality tracking generally
+3. **Improve dataset planning**
+   The smaller but more detailed dataset works, but future milestones should document dataset trade-offs proactively
+4. **Strengthen CI/CD and documentation**
+   The Docker environment was functional but incomplete; onboarding documentation should ideally have been finished such that I could run the app more easily
+
+---
