@@ -51,3 +51,40 @@ These questions were used for validating the milestone review accuracy and asses
 
 
 ---
+
+
+## C. Findings
+
+### 1a. Charter & Timeline Accuracy
+
+**Score: 6/10**
+The team initially intended to start with backend tasks but shifted earlier toward frontend work, forcing multiple timeline changes. This reduced alignment with the charter and baseline Gantt plan - but it aligned well enough after simple restructuring (at a glance)
+
+### 1b. Video vs. Current Implementation
+
+**Score: 7/10**
+The current application includes improvements (ie a more detailed metrics page with cardio sect). UI/UX quality surpassed what the video preview suggested, but some flows appeared slightly different due to scope changes
+
+### 1c. Milestone Review Accuracy
+
+**Score: 8/10**
+The milestone review accurately reflected deliverable statuses at a glance. The two Conditional Pass items (database setup and Docker environment) match the technical gaps seen during code review. Once again this does seem like an issue that should be solved by dec 5 however.
+
+### 2a, 2b, & 2c. Change, Risk, and Quality Tracking
+
+* **Change log detail: 8/10** – Comprehensive and up to date.
+* **Risk & change tracking: 9/10** – Risks were well documented, and mitigations were clear.
+* **Quality tracking: ~8/10** – Team members were consistent, noting that quality metrics existed but some (e.g., dataset coverage, test completeness) were not fully implemented.
+
+### Charter Objectives at Risk
+
+The gym dataset is smaller than originally planned (5 or 6 gyms), though more detailed. This partially worsened the "gym discovery" feature quality, but did not jeopardize quality overall
+
+### 3. Responsiveness to Stakeholder Requests
+
+**Score: 10/10**
+The team adapted extremely well overall to stakeholder needs, especially with the added Gym Finder MVP & refined dashboard UX. The only room for improvement I saw would have been achieving this in better accordance with the plan
+
+---
+
+## D. Suggestions & Recommendations
