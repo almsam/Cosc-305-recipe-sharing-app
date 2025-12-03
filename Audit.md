@@ -49,9 +49,7 @@ To conduct the audit, the following materials were reviewed:
 
 These questions were used for validating the milestone review accuracy and assessing project management practices.
 
-
 ---
-
 
 ## C. Findings
 
@@ -84,6 +82,11 @@ The gym dataset is smaller than originally planned (5 or 6 gyms), though more de
 
 **Score: 10/10**
 The team adapted extremely well overall to stakeholder needs, especially with the added Gym Finder MVP & refined dashboard UX. The only room for improvement I saw would have been achieving this in better accordance with the plan
+
+### Summary of Scores:
+
+![The San Juan Mountains are beautiful](/assignments/Audit%20graph.png "San Juan Mountains")
+
 
 ---
 
