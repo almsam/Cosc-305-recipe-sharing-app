@@ -1,0 +1,889 @@
+
+audit meeting notes
+```
+How closely is your team using the Gantt chart for weekly planning?
+How many changes did you make to the gantt timeline?
+	started with backend and wanted to go front.
+	had to move front end up, which changed timeline
+
+
+Which Proj Charter objectives are at risk, and what's being done to address them?
+Are there quality metrics you planned but not yet implemented? If yes - why?
+	made the gym dataset smaller, but way more detailed	
+
+Can you clarify any discrepancies between the video features and the current implementation?
+	metric page is now more detailed, section for cardio
+
+1a. Charter & Timeline accuracy: 6/10 - challenges diverted various things
+1b. Video quality compared to end product: 7/10 - better UX
+1c. Milestone review accuracy: 8/10
+
+2a. How detailed is your change log: 8/10
+2b. How accurate was risk and change tracking: 9/10
+2c. How extensive was quality tracking (quality metrics): [8, 8.5, 8]/10 - very small varrience in group members answers
+
+3. How well did you respond to shareholder requests?: 10/10 - they adapted well
+```
+
+assignment:
+```
+Audit Report: the audit report will combine the reviews under one umbrella document. It should
+include the following sections:
+
+a. Introduction chapter: the introduction should summarize:
+i. What the audit is about, and what questions you are trying to answer.
+ii. The projects your team audited and by whom each project was reviewed
+iii. A short explanation on how the document is organized so that the reader find consistency in
+the presentation results of each project.
+
+b. include:
+i. An introduction of the project audited, including the name of the auditor, and a quick
+summary of the project being audited
+ii. The audit process in particular, what methodology was used to do the assessment and be in
+a position to respond to the questions asked by the executive. That includes which
+documents were made available, which ones were reviewed and why. It should also specify
+the date, time and length of the meeting with the team, the questions asked and their
+importance for the assessment.
+iii. The findings from the audit process responding to the questions of the executives
+iv. The suggestions and recommendations to augment the chances of success of the project
+v. The conclusion
+```
+
+team github repo:
+
+readme
+```
+FitBuddy – Milestone Review Access README
+This README provides access to all materials required by auditors and executives for the COSC 305 Milestone Review.
+
+It includes:
+
+The Milestone Review (PDF)
+The Executive Video link
+Milestone Review Document
+Full Milestone Review PDF containing project recap, architecture, deliverable status, scope changes, risks, issues, workload analysis, and baseline Gantt.
+
+Download FitBuddy_Milestone_Review_L04.pdf
+
+Executive Video (UI Prototype)
+YouTube link showing the required 3–5 minute UI demo: https://www.youtube.com/watch?v=aAtfFMJeWhM
+
+Repository Structure (Relevant to Audit)
+/
+   FitBuddy_Milestone_Review_L04.pdf
+   README.md
+Notes for Auditors
+All documents required for the audit have been provided. Smartsheet exports, change logs, risks, issues, and decisions are included in the repository.
+
+Important: The stable version of our application is the development branch.
+```
+
+dev branch readme
+```
+FitBuddy - Full-Stack Fitness Application
+A modern full-stack web application for fitness tracking and management.
+
+Status: FULLY INTEGRATED AND WORKING
+The frontend and backend are now fully connected! You can create accounts, login, and access the dashboard.
+
+Tech Stack
+Frontend: React.js with Vite, React Router, Tailwind CSS
+Backend: Node.js with Express.js, JWT authentication
+Database: PostgreSQL (optional - currently using in-memory mock data)
+Project Structure
+fitbuddy/
+├── frontend/          # React frontend application (CONNECTED)
+├── backend/           # Express.js API server (WORKING)
+├── database/          # PostgreSQL schema and migrations
+├── docker-compose.yml # Docker setup for PostgreSQL
+├── SETUP_AND_TEST_GUIDE.md  # Detailed setup and testing guide
+└── README.md
+Quick Start (In-Memory Mode - No Database Required)
+Prerequisites
+Node.js (v18 or higher)
+npm or yarn
+1. Start Backend Server
+Open a terminal:
+
+cd fitbuddy/backend
+npm install
+npm run dev
+The backend will run on http://localhost:5000
+
+KEEP THIS TERMINAL RUNNING!
+
+2. Start Frontend Server
+Open a NEW terminal:
+
+cd fitbuddy/frontend
+npm install
+npm run dev
+The frontend will run on http://localhost:3000
+
+KEEP THIS TERMINAL RUNNING!
+
+3. Test the Application
+Open browser to http://localhost:3000
+Click "Get Started" to create an account
+Fill in signup form and create account
+You'll be redirected to the dashboard
+See your stats and explore!
+See SETUP_AND_TEST_GUIDE.md for detailed testing instructions.
+
+Current Features (Working)
+Authentication
+User signup with role selection (Member/Trainer)
+User login with JWT tokens
+Protected routes and dashboard
+Logout functionality
+Backend API (All Working)
+User authentication endpoints
+User profile management
+Exercise library (6 pre-loaded exercises)
+Workout management
+Session/workout logging
+User statistics
+Frontend Pages
+Landing page
+Login page (connected to API)
+Signup page (connected to API)
+Dashboard (protected, shows user stats)
+Development
+Frontend: Port 3000 (auto-reload on save)
+Backend: Port 5000 (auto-reload on save)
+Storage: In-memory (data clears on restart)
+API Endpoints Available
+Full list in SETUP_AND_TEST_GUIDE.md and INTEGRATION_GUIDE.md
+
+Quick Reference
+POST /api/auth/signup - Create account
+POST /api/auth/login - Login
+GET /api/auth/me - Get current user
+GET /api/exercises - Get all exercises
+POST /api/workouts - Create workout
+POST /api/sessions - Log workout session
+GET /api/users/:id/stats - Get user stats
+Next Steps
+Add More Pages: Workout creator, exercise browser, session logger
+Set Up PostgreSQL: Migrate from in-memory to persistent database
+Add Features: Progress charts, workout history, social features
+Enhance UI: More animations, better mobile responsiveness
+Contributing
+This is a starter template. Feel free to customize and extend it for your needs!
+
+License
+MIT
+```
+
+milestone review pdf:
+```
+FITBUDDY MILESTONE
+REVIEW
+COSC 305 • PROJECT MILESTONE REVIEW • FREEZE DATE:
+NOV 7, 2025
+TEAM: ABDULLAH MUNIR • ALI HAIDER • RAAD SARKER
+
+• Project recap and architecture
+• Milestone scope and evaluation approach
+
+AGENDA
+
+• Deliverables status and progress over time
+• Scope changes, change requests, and
+movement
+• Risks, issues, and team workload pulse
+• Go / No-Go recommendation and lessons
+learned
+
+FITBUDDY – PROJECT RECAP
+•
+
+Full-stack fitness companion for members and trainers.
+
+•
+
+Core flows: signup/login, dashboards for members & trainers,
+class booking, workout & progress tracking, and basic gym
+discovery.
+
+•
+
+Target users: busy students and young professionals who want
+simple, structured workouts with trainer guidance.
+
+•
+
+Sponsor outcome: a working prototype web app plus a short
+demo video showcasing the core use cases.
+
+TECHNICAL ARCHITECTURE – HIGH LEVEL
+
+• Frontend: React + Vite + React Router + Tailwind CSS.
+
+• Backend: Node.js + Express REST APIs, organized by domain (auth, users,
+workouts, sessions, gyms).
+• Auth & security: JWT-based authentication, role-based access (trainer vs
+member), secure cookie / local storage handling.
+• Data layer: PostgreSQL-ready schema for users, workouts, exercises, sessions,
+and gym metadata.
+• Dev & infra: Dockerized multi-container setup (frontend + backend +
+database) for consistent local development.
+
+FROM CHARTER TO NOW – SCOPE EVOLUTION
+
+• Original Charter (P2):
+•
+
+• Very broad feature set (workouts, nutrition, social feed, advanced analytics, admin
+portal).
+
+•
+
+• Ambitious multi-gym & multi-role vision in a single term.
+
+• Current Milestone Scope:
+•
+
+• Narrowed to two main personas: member and trainer, with one primary gym context.
+
+•
+
+• Focus on end-to-end flows (auth → dashboard → booking / tracking) instead of many
+half-finished features.
+
+•
+
+• Added sponsor-requested client video and future Gym Finder as separate, clearly
+tracked scope changes.
+
+MILESTONE CONTEXT
+
+• Milestone covers all deliverables from project start (Week 7) through the
+freeze date (Nov 7, Week 12).
+• Evaluation is based on the baseline Gantt chart saved on Nov 7 (see Appendix
+– Baseline Gantt slide) with no new change requests applied during freeze.
+• Scope, risks, issues, and decisions are tracked in dedicated Smartsheet sheets
+and synced into Excel.
+• Goal of this review: provide sponsors with a realistic view of current status,
+remaining risks, and readiness for the next phase.
+
+DEFINITIONS – PASS / CONDITIONAL / DID NOT PASS
+•
+
+•
+
+•
+
+Pass
+•
+
+• Deliverable is complete and meets the acceptance criteria.
+
+•
+
+• Code merged into main/main-like branch and demoed with no critical defects.
+
+•
+
+• Linked documentation (README, architecture notes, test notes) is present.
+
+•
+
+• Mapped to Smartsheet status = “Complete” at the freeze date.
+
+Conditional Pass
+•
+
+• Functionality is implemented and demoable but has minor gaps (styling, small bugs, missing edge-case tests).
+
+•
+
+• Work may still be on a feature branch and needs review or clean-up before release.
+
+•
+
+• Mapped to Smartsheet status = “In Progress” (≥ 90% complete) at the freeze date.
+
+•
+
+• Example: Docker dev environment and database seeding – usable for us, but onboarding docs and clean-up still pending.
+
+Did Not Pass
+•
+
+• Critical acceptance criteria not met or not usable for demo.
+
+•
+
+• Mapped to Smartsheet status = “Not Started” or “Blocked” at the freeze date.
+
+•
+
+• Not mapped to any deliverable in this milestone – all items were at least Conditional Pass or better.
+
+EVALUATION PROCESS
+• Reviewed Smartsheet % complete and statuses against actual code, UI, and
+demo flows.
+• Cross-checked Git commit history and pull requests, e.g., frontend design PR
+“Fix: Dynamic User Name Display and Role-Based Routing” and workout/auth
+PRs.
+• Validated functionality with manual end-to-end runs: login → dashboard →
+workout tracking → class scheduling.
+• Verified backend API responses against seeded database records for users,
+workouts, classes, and gyms.
+• Reviewed the demo video so that milestone flows (auth → dashboard →
+booking/tracking) match what the sponsor expects to see.
+
+DELIVERABLES STATUS – SUMMARY
+Deliverables
+
+Pass
+Conditional Pass
+Did Not Pass
+
+DELIVERABLES COMPLETED BY WEEK
+7
+
+Conditional Pass
+
+Pass
+
+6
+5
+4
+
+3
+2
+1
+0
+7
+
+8
+
+9
+
+10
+
+11
+
+CONDITIONAL PASS DELIVERABLES – FOLLOW-UP
+• Set Up Database (Week 7)
+•
+
+• Smartsheet status: In Progress (marked 100% complete at freeze; docs/edge
+cases pending).
+
+•
+
+• Owner: Ali – Target completion: Nov 15.
+
+•
+
+• Follow-up: finalize edge-case testing and update documentation so new
+developers can seed data reliably.
+
+• Dockerized Dev Environment (Week 8)
+•
+
+• Smartsheet status: In Progress (≈95% complete at freeze).
+
+•
+
+• Owner: Raad – Target completion: Nov 16.
+
+•
+
+• Follow-up: finalize onboarding docs, polish docker-compose scripts, and verify on
+a clean machine.
+
+SCOPE CHANGES AND MOVEMENT
+Count
+
+16
+14
+12
+10
+8
+6
+4
+2
+0
+New in milestone
+
+Archived / descoped
+
+Unchanged baseline
+deliverables
+
+Scope Changes and Movement
+Examples:
+• Descoped: "Forget Password" workflow (kept basic login to stay on schedule).
+• Deferred: Advanced analytics dashboard moved to the next milestone.
+• Added: Gym Finder MVP after sponsor discussion, tracked as Additional Feature.
+
+KEY DECISIONS & CHANGE REQUESTS
+•
+
+Key Decisions & Change Requests
+
+•
+
+• 2025-10-08 – Auth Setup
+
+•
+
+– Decision: Use JWT-based auth with role-based routing for members vs trainers.
+
+•
+
+– Impact: Medium – Faster backend integration; required extra frontend work for routing.
+
+•
+
+• 2025-10-15 – Gym Finder MVP
+
+•
+
+– Decision: Add basic Gym Finder to the scope as an Additional Feature.
+
+•
+
+– Impact: High – Pulled some UI capacity away from analytics, but did not delay the critical path.
+
+•
+
+• 2025-10-22 – Dockerized Dev Environment
+
+•
+
+– Decision: Standardize dev setup with Docker; treat remaining polish as Conditional Pass.
+
+•
+
+– Impact: Medium – Short-term set-up friction but better long-term velocity.
+
+•
+
+Overall, change requests were controlled and tracked; none forced critical-path items beyond the
+freeze date.
+
+Risks
+• 4 TRACKED RISKS: 2 HIGH IMPACT, 2 MEDIUM, 0 LOW.
+• 3 RISKS REMAIN OPEN (CI/CD & BRANCHING, FE/BE
+INTEGRATION, LIMITED UI POLISH).
+• 1 RISK IS CLOSED (BACKEND PAUSE EARLY IN TERM –
+RESOLVED ONCE TEAM ALIGNED ON TECH STACK).
+KEY EXAMPLES:
+• HIGH – CI/CD PIPELINE NOT READY: MITIGATED BY
+MANUAL DEPLOY STEPS AND A SIMPLIFIED DOCKER
+FLOW.
+• HIGH – FRONTEND/BACKEND INTEGRATION DELAYS:
+MITIGATED VIA EARLIER TEST ROUTES AND PAIRING
+SESSIONS.
+• MEDIUM – LIMITED UI POLISH: ACCEPTED FOR THIS
+MILESTONE; SCHEDULED AS EXPLICIT SCOPE IN THE
+NEXT PHASE.
+
+Closed
+Open
+
+Issues
+2.5
+
+2
+
+ALL LOGGED ISSUES THIS MILESTONE WERE HIGH IMPACT (E.G., DOCKER
+BLOCKING DEV, MISSING ROUTES, FAILING BUILDS).
+• TOTAL ISSUES: 4 HIGH, 0 MEDIUM, 0 LOW.
+• AVERAGE RESOLUTION TIME FOR HIGH ISSUES: ~7 DAYS FROM
+DISCOVERY TO FIX + VERIFICATION.
+• 2 HIGH ISSUES ARE CLOSED; 2 REMAIN OPEN AT THE FREEZE DATE.
+OPEN HIGH-SEVERITY ISSUES (WITH OWNERS AND ETAS):
+• DB SEEDING EDGE CASES – OWNER: ALI – TARGET FIX: NOV 14.
+• MINOR ROUTING BUG AFFECTING A NON-CRITICAL PAGE – OWNER:
+RAAD – TARGET FIX: NOV 13.
+EXAMPLE CLOSED HIGH ISSUE: DOCKER DEV ENVIRONMENT BREAKING
+FOR ALL TEAM MEMBERS FOR ~5 DAYS UNTIL IMAGES AND COMPOSE
+FILES WERE FIXED.
+
+1.5
+
+1
+
+0.5
+
+0
+Closed
+
+Open
+
+Total hours
+30
+
+• WORKLOAD STEADILY INCREASED FROM
+WEEKS 7–11 AS MAJOR BACKEND AND
+FRONTEND DELIVERABLES WERE
+IMPLEMENTED.
+• WEEK 12 CURRENTLY SHOWS LOWER
+LOGGED HOURS AS IT ONLY CONTAINS THE
+FIRST DAYS AFTER THE FREEZE.
+• TYPICAL LOAD WAS ~25–30 HOURS PER
+WEEK ACROSS THE TEAM, WHICH WE
+CONSIDER SUSTAINABLE WITH NO BURNOUT
+REPORTED.
+
+25
+20
+15
+10
+5
+0
+7
+
+8
+
+9 10 11 12
+
+GO / NO-GO RECOMMENDATION
+•
+
+Recommendation: GO – proceed to the next phase with a focus on polish and integration.
+
+•
+
+Why GO:
+
+•
+
+• 17/19 deliverables (≈89%) fully Passed; the remaining 2 are Conditional Pass, non-critical, and
+have owners + target dates.
+
+•
+
+• All critical backend APIs and core frontend flows (auth, dashboards, workout tracking, basic Gym
+Finder) are implemented and demoable.
+
+•
+
+• No high-severity risks realized; open risks are understood and tracked with mitigation steps in
+place.
+
+•
+
+• Team workload has been sustainable, and stakeholders are prepared for the demo.
+
+•
+
+What to focus on next: CI/CD hardening, docs for the dev environment, and UI polish for
+member/trainer dashboards.
+
+Earlier focus on end-to-end slices (auth →
+dashboard → one complete flow) would
+reduce integration risk later.
+
+LESSONS
+LEARNED &
+NEXT STEPS
+
+Pair programming and clearer branching
+strategy helped reduce merge-conflict risk
+but should have been adopted earlier.
+Using Smartsheet status + short weekly
+written updates made it easier to run this
+milestone review quickly.
+Next steps: close the remaining Conditional
+Pass items, harden testing, and refine the
+UI before final client demo.
+
+CONDITIONAL PASS DELIVERABLES
+
+• Deliverable | % Complete | Critical Path | Owner | Target Date | Status
+Update
+• Set Up Database | 100% | No | Ali | Nov 15 | Fully functional; clean-up +
+documentation still being polished.
+• Dockerized Dev Environment | 95% | No | Raad | Nov 16 | Works for team;
+onboarding docs and minor script fixes pending.
+• Risk if delayed: slower onboarding for new contributors and more friction
+when setting up new dev machines.
+
+MOVEMENT OF DELIVERABLES
+• Movement of Deliverables
+• Moved Earlier: 1
+• Moved Later Inside Milestone: 2
+• Moved Outside Milestone: 1
+• Archived: 0
+
+• The item moved outside the milestone is: Advanced analytics dashboard.
+• Reason: Sponsor prioritized a working Gym Finder and solid core flows over
+extra analytics, so analytics moved to the next milestone.
+
+RISK CATEGORIZATION SUMMARY
+
+• Open Risks: 3 (CI/CD pipeline, branching strategy, FE/BE integration)
+• Closed Risks: 1 (backend pause / tech stack uncertainty)
+• Accepted Risks: 1 (limited UI polish for this milestone)
+
+• Mitigated Risks: 2 (integration and CI/CD workarounds)
+• Realized Risks: 0 (none turned into major production-level issues yet)
+• Next steps: Reduce exposure by finishing CI/CD, tightening branching rules,
+and allocating time for UI polish early in the next milestone.
+
+ISSUE CATEGORIES AND
+RESOLUTION TIME THIS
+MILESTONE
+•
+
+Low severity: 0 issues
+
+•
+
+Medium severity: 0 issues
+
+•
+
+High severity: 4 issues (Dockerization, missing APIs, test failures,
+routing/DB problems)
+
+•
+
+Average resolution time:
+
+•
+
+High: ~7 days
+
+•
+
+At freeze time, 2 High issues remain open (DB seeding edge cases
+and a minor routing bug) with owners and target dates – see
+Issues Overview for details.
+
+•
+
+Goal for next milestone: reduce average High-severity resolution
+from ~7 days to 3–4 days by tightening CI and adding earlier
+smoke tests
+
+LESSONS LEARNED (MILESTONE
+1)
+
+• Earlier identification of at-risk deliverables
+needed.
+• Branching strategy created merge friction—
+must improve.
+
+• Testing coverage must be expanded earlier in
+the milestone.
+• Documentation updates should be done
+incrementally.
+• Risk definitions and status categories need
+refining.
+
+Deliverables
+Pass
+
+APPENDIX – DETAILED
+MILESTONE CHARTS
+
+Conditional
+Pass
+Did Not
+Pass
+
+•
+
+These charts provide detailed evidence
+backing up the milestone story.
+
+•
+
+Total milestone deliverables: 19
+
+•
+
+Pass: 17 (≈89%)
+
+•
+
+Conditional Pass: 2 (≈11%)
+
+•
+
+Did Not Pass: 0
+
+•
+
+Interpretation: We completed the vast
+majority of planned work. The two
+Conditional Pass items are non-critical
+infrastructure with clear owners and dates.
+
+4.5
+
+Pass
+
+4
+
+3.5
+
+Conditional
+Pass
+
+3
+
+Did Not Pass
+
+2.5
+
+WEEK-BY-WEEK
+DELIVERABLE
+STATUS (PASS VS
+CONDITIONAL)
+• Status of deliverables by
+week (Weeks 7–12,
+freeze on Nov 7).
+
+2
+1.5
+1
+0.5
+0
+Week 7 Week 8 Week 9 Week Week Week
+10
+11
+12
+
+• Most Passes cluster in
+Weeks 10–11 as
+backend + frontend
+integration finished,
+which matches the
+baseline Gantt plan for
+core feature completion.
+
+Deliverables
+2.5
+2
+
+MOVEMENT OF
+DELIVERABLES DURING
+MILESTONE
+
+1.5
+
+1
+
+• Overview of how deliverables moved
+relative to the original plan.
+
+0.5
+
+• • 1 moved earlier in the milestone.
+
+0
+
+• • 2 moved later inside the milestone.
+• • 1 moved outside the milestone.
+• • 0 archived.
+
+• Interpretation: Movement was limited
+and mostly on non-critical items; the
+critical path for core auth, dashboards,
+and workout tracking stayed aligned
+with the baseline Gantt.
+
+Total Team Hours
+
+TEAM WORKLOAD PULSE
+– HOURS PER WEEK
+(ILLUSTRATIVE)
+
+35
+30
+25
+
+20
+15
+10
+5
+0
+
+Total
+Team
+Hours
+
+• Approximate total hours logged by
+the team per week (Weeks 7–12).
+
+• Interpretation: Hours ramp up as we
+approach core feature deadlines
+(Weeks 9–11) and drop slightly
+post-freeze.
+• This matches the baseline Gantt,
+where most core backend +
+frontend features were scheduled
+to complete by early November.
+
+EVIDENCE – PULL REQUESTS &
+CODE ARTIFACTS
+•
+
+We used concrete artifacts to support the milestone
+evaluation:
+
+•
+
+• Frontend PR “Fix: Dynamic User Name Display and
+Role-Based Routing” – removed hardcoded user data,
+fixed role-based redirects, and normalized backend fields
+to `name`.
+
+•
+
+• Backend auth routes and middleware now normalize
+`full_name` → `name` before responses, ensuring
+consistent data for dashboards and navbars.
+
+•
+
+• Member and trainer dashboards/profiles now read
+from context + localStorage so names and roles display
+correctly after signup/login.
+
+•
+
+• These changes back up our claims that core auth +
+dashboard flows are implemented and demoable.
+
+BASELINE GANTT AT
+FREEZE DATE (NOV 7,
+2025)
+•
+
+This is the baseline Gantt used for planning
+and evaluating the milestone.
+
+•
+
+• Freeze date: Nov 7, 2025.
+
+•
+
+• Core backend + frontend features (auth,
+dashboards, workout tracking) were
+scheduled to finish by early November.
+
+•
+
+• The clustering of Passed deliverables in
+Weeks 10–11 aligns with these planned
+completion dates.
+
+•
+
+• Movement of deliverables (1 earlier, 2
+later, 1 outside) occurred on non-critical
+items and did not extend the critical path.
+
+
+```
