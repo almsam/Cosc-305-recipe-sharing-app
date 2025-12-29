@@ -2,6 +2,7 @@
 
 During my undergraduate studies at UBC, I  worked on this project as part of the Cosc 305 project management course. The project involved creating a recipe sharing web application called "Wooden Spoon". Below is an overview of the project, including team members, objectives, scope, and tech stack.
 
+The main takeaways from this class were learning how to effectively manage a software project, work collaboratively in a team, and apply project management principles to ensure timely delivery of a functional product.
 
 ### Members
 
