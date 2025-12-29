@@ -6,11 +6,11 @@ The main takeaways from this class were learning how to effectively manage a sof
 
 I also learnt project planning tools like Gantt mapping, timeline estimation, and more. Ultimately I am leaving this course with the confidence to manage a team of people and run a project in the way I need it to in the future.
 
-### Members
+### Team Members
 
-Samira Almuallim
-Aakash Singh
-Estella Arnott
+Samira Almuallim - Front end Lead and dev ops
+Aakash Singh - Backend Lead and full stack
+Estella Arnott - Database Lead and deployment
 
 ### Project Overview & Obective
 
