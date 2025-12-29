@@ -1,5 +1,8 @@
 # Cosc 305 Recipe app - L04-SegFaults
 
+During my undergraduate studies at UBC, I  worked on this project as part of the Cosc 305 project management course. The project involved creating a recipe sharing web application called "Wooden Spoon". Below is an overview of the project, including team members, objectives, scope, and tech stack.
+
+
 ### Members
 
 Samira Almuallim
