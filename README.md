@@ -39,4 +39,4 @@ Deliver a functional MVP within the term, aligned with project requirements and 
 
 [Click here](https://app.smartsheet.com/sheets/2C3x5GcQHm6mwGgfX3wcQMh38xpwjc426XJ29Gx1) for the native format
 
-![image](https://github.ubc.ca/samialmu/L04-SegFaults/assets/4469/b4a715ce-292a-4d09-bec0-db84ce22f242)
+![image](./gantt_chart.png)
