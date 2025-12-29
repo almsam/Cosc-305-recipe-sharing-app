@@ -4,6 +4,7 @@ During my undergraduate studies at UBC, I  worked on this project as part of the
 
 The main takeaways from this class were learning how to effectively manage a software project, work collaboratively in a team, and apply project management principles to ensure timely delivery of a functional product.
 
+I also learnt project planning tools like Gantt mapping, timeline estimation, and more. Ultimately I am leaving this course with the confidence to manage a team of people and run a project in the way I need it to in the future.
 ### Members
 
 Samira Almuallim
